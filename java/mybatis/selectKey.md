@@ -1,5 +1,6 @@
 # 基本说明
 >selectKey
+
 ```
 <selectKey
   keyProperty="id"
@@ -18,8 +19,8 @@
 
 摘抄自官网: http://www.mybatis.org/mybatis-3/zh/sqlmap-xml.html#insert_update_and_delete
 # 基本使用
-
 > mapper.xml
+
 ```
 <insert id="insertAuthor">
   <selectKey keyProperty="id" resultType="int" order="BEFORE">
@@ -32,6 +33,7 @@
 </insert>
 ```
 > main.java
+
 ```
     // 省略获得 mapper 对象的代码和实体类相关代码
     Author author = new Author();
@@ -47,13 +49,11 @@
 # 主键生成
 ## 简要说明
 首先来看主键生成的接口
+
 ```
 public interface KeyGenerator {
-
   void processBefore(Executor executor, MappedStatement ms, Statement stmt, Object parameter);
-
   void processAfter(Executor executor, MappedStatement ms, Statement stmt, Object parameter);
-
 }
 ```
 
