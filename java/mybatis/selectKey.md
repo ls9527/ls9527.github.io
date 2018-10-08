@@ -1,4 +1,5 @@
 # 基本说明
+>selectKey
 ```
 <selectKey
   keyProperty="id"
@@ -6,7 +7,6 @@
   order="BEFORE"
   statementType="PREPARED">
 ```
-
 
 | 属性 | 描述 |
 | ------ | ------ |
@@ -18,6 +18,7 @@
 
 摘抄自官网: http://www.mybatis.org/mybatis-3/zh/sqlmap-xml.html#insert_update_and_delete
 # 基本使用
+
 > mapper.xml
 ```
 <insert id="insertAuthor">
